@@ -11,6 +11,9 @@ set nowrap
 set number
 set showcmd
 set wildmenu
+set laststatus=2
+set cursorline
+set cursorcolumn
 
 "搜索
 set ignorecase
@@ -32,3 +35,7 @@ set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+
+"TagList
+nnoremap <silent> <F3> :TlistToggle<CR>
+let Tlist_Exit_OnlyWindow = 1
