@@ -26,6 +26,10 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
+"映射
+nnoremap <silent> q: :
+cmap w!! w !sudo tee > /dev/null %
+
 "代码相关
 set autoindent
 set expandtab
@@ -51,3 +55,16 @@ let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_cache_omnifunc=0
+
+"cscope
+if filereadable("cscope.out")  
+	cs add cscope.out  
+endif
+nnoremap <silent> <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <silent> <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nnoremap <silent> <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <silent> <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
