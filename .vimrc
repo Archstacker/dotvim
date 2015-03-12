@@ -38,9 +38,9 @@ set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-"TagList
-nnoremap <silent> <F3> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow = 1
+"TagBar
+nnoremap <silent> <F3> :TagbarToggle<CR>
+let tagbar_width=32 
 
 "NERDTree
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
