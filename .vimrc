@@ -68,3 +68,12 @@ nnoremap <silent> <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent> <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nnoremap <silent> <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent> <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+
+"incsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
