@@ -15,6 +15,7 @@ set wildmenu
 set laststatus=2
 set cursorline
 set cursorcolumn
+highlight ModeMsg ctermfg=green 
 
 "搜索
 set ignorecase
@@ -48,6 +49,7 @@ let tagbar_width=32
 
 "NERDTree
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
+let g:NERDTreeChDirMode=2
 
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
@@ -55,6 +57,7 @@ let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_cache_omnifunc=0
+let g:ycm_show_diagnostics_ui = 0
 
 "cscope
 if filereadable("cscope.out")  
@@ -68,6 +71,9 @@ nnoremap <silent> <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent> <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nnoremap <silent> <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nnoremap <silent> <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+
+"CtrlP
+let g:ctrlp_working_path_mode = 'a'
 
 "incsearch
 let g:incsearch#auto_nohlsearch = 1
