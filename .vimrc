@@ -29,7 +29,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 "映射
 nnoremap <silent> q: :
-cmap w!! w !sudo tee > /dev/null %
+cmap <silent> w!! w !sudo tee > /dev/null % <CR>
 
 "代码相关
 set autoindent
@@ -76,6 +76,9 @@ nnoremap <silent> <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 let g:ctrlp_working_path_mode = 'a'
 
 "incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
