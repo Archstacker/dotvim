@@ -9,6 +9,7 @@ set nocompatible
 set nowrap
 
 "显示
+set list
 set number
 set showcmd
 set wildmenu
@@ -16,6 +17,7 @@ set laststatus=2
 set cursorline
 set cursorcolumn
 highlight ModeMsg ctermfg=green 
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 "搜索
 set ignorecase
