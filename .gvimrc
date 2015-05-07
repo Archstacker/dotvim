@@ -1,0 +1,2 @@
+colorscheme slate
+set go=
