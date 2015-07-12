@@ -32,6 +32,12 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 "映射
 nnoremap <silent> q: :
 cmap <silent> w!! w !sudo tee > /dev/null % <CR>
+nnoremap k gk
+nnoremap j gj
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 "代码相关
 set autoindent
@@ -91,3 +97,6 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+"fcitx.vim
+set ttimeoutlen=80
