@@ -101,6 +101,9 @@ map g# <Plug>(incsearch-nohl-g#)
 "fcitx.vim
 set ttimeoutlen=80
 
+"airline
+let g:airline#extensions#whitespace#enabled = 0
+
 "rainbow_parentheses.vim
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
