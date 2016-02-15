@@ -30,14 +30,16 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 "映射
-nnoremap <silent> q: :
-cmap <silent> w!! w !sudo tee > /dev/null % <CR>
 nnoremap k gk
 nnoremap j gj
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+nmap <Leader>p "+p
+vnoremap <Leader>y "+y
+nnoremap <silent> q: :
+cmap <silent> w!! w !sudo tee > /dev/null % <CR>
 
 "代码相关
 set autoindent
@@ -68,7 +70,11 @@ let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_cache_omnifunc=0
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
+nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
+map <C-]> :YcmCompleter GoToImprecise<CR>
 
 "cscope
 if filereadable("cscope.out")  

@@ -1,2 +1,2 @@
-colorscheme slate
 set go=
+colorscheme molokai
